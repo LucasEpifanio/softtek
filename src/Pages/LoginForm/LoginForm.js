@@ -1,4 +1,3 @@
-// LoginForm.js
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { toast } from "react-toastify";
@@ -14,18 +13,23 @@ const LoginForm = ({ className = "" }) => {
 
   const validateForm = () => {
     let isValid = true;
-    if (!email.includes("@")) {
-      toast.error("O e-mail deve conter '@'.");
-      isValid = false;
-    }
+
     if (!email) {
-      toast.error("O campo e-mail é obrigatório.");
+      toast.warn("O campo e-mail é obrigatório.");
+      isValid = false;
+    } else if (!email.includes("@")) {
+      toast.warn("O e-mail deve conter '@'.");
+      isValid = false;
+    } else if (email.length < 4) {
+      toast.warn("O e-mail deve conter pelo menos 4 caracteres.");
       isValid = false;
     }
+
     if (!password) {
-      toast.error("O campo senha é obrigatório.");
+      toast.warn("O campo senha é obrigatório.");
       isValid = false;
     }
+
     return isValid;
   };
 
@@ -49,7 +53,7 @@ const LoginForm = ({ className = "" }) => {
 
   return (
     <form className={`login-form ${className}`} onSubmit={handleSubmit}>
-       <div className="wel">
+      <div className="wel">
         <div className="welcomeMessage">
           <h1 className="bemVindo">Bem Vindo!</h1>
         </div>

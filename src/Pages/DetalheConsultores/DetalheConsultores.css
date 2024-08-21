@@ -1,0 +1,186 @@
+.detalheconsultores-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0rem 1rem;
+  font-family: Raleway;
+}
+/* form style */
+.form-detalheconsultores {
+  font-size: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  isolation: isolate;
+}
+/* a fancy bg for showing background and border when focus. */
+.fancy-bg-detalheconsultores {
+  position: absolute;
+  width: 100%;
+  inset: 0;
+  background: #0aab9e;
+  border-radius: 15px;
+  border: none;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+/* label styling */
+label.labeldetalheconsultores {
+  width: 100%;
+  padding: 0.8em;
+  height: 60px;
+  padding-inline: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+.search-detalheconsultores,
+.close-btn {
+  position: absolute;
+}
+/* styling search-icon */
+.search-detalheconsultores {
+  fill: #e6e6e6;
+  left: 1rem;
+}
+/* svg -- size */
+.search-detalheconsultores svg {
+  width: 25px;
+  display: block;
+}
+.close-btn {
+  border: none;
+  right: 1.2em;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1em;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: transparent; /* Define como transparente */
+  color: transparent; /* Define o ícone como transparente */
+  opacity: 0;
+  visibility: hidden;
+  transition: background 0.3s ease, color 0.3s ease, opacity 0.3s ease; /* Adiciona transição suave */
+}
+
+/* showing close button when input is focused and typing */
+.input-detalheconsultores:focus:valid ~ .close-btn {
+  opacity: 1;
+  visibility: visible;
+  color: #fff; /* Cor do ícone quando ativado */
+}
+/* styling of input */
+.input-detalheconsultores {
+  color: #fff;
+  width: 100%;
+  margin-inline: min(2em, calc(1.2em + 0.9rem));
+  background: none;
+  border: none;
+  font-size: 1rem;
+}
+
+.input-detalheconsultores:focus {
+  outline: none;
+}
+
+.input-detalheconsultores::placeholder {
+  color: #e6e6e6;
+  font-size: 0.9rem;
+}
+/* input background change in focus */
+.input-detalheconsultores:focus ~ .fancy-bg {
+  border: 1px solid #d6d8dd;
+  background: transparent;
+}
+/* search icon color change in focus */
+.input-detalheconsultores:focus ~ .search-detalheconsultores {
+  fill: #fff;
+}
+/* showing close button when typing */
+.input-detalheconsultores:valid ~ .close-btn {
+  opacity: 1;
+  visibility: visible;
+}
+/* this is for the default background in input,when selecting autofill options -- you can remove this code if you do not want to override the browser style.  */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+  -webkit-transition-delay: 9999s;
+}
+
+.panel-container-detalheconsultores {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: space-between;
+}
+
+.panel-detalhesconsultores {
+  background: linear-gradient(
+    126.97deg,
+    rgba(6, 11, 38, 0.74),
+    rgba(26, 31, 55, 0.5)
+  );
+  color: white;
+  flex: 1;
+  padding: 1rem 1rem;
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.248);
+}
+.panel-container-filtro {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    126.97deg,
+    rgba(11, 22, 74, 0.74),
+    rgba(33, 44, 95, 0.5)
+  );
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.248);
+  margin:0.8rem 0;
+}
+
+.panel-top-detalheconsultores{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+.panel-top-detalheconsultores img{
+  width: 7rem;
+  height: 7rem;
+}
+
+.graph-profile-detalheconsultores{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin: 1rem;
+}
+.panel-bottom-detalheconsultores{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.panel-3-detalheconsultores{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

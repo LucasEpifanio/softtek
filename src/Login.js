@@ -9,7 +9,7 @@ const Login = () => {
     <div className="login">
       <img className="backgroundItem" alt="Login Background" src={loginImage} />
       <div className="softtek">
-        <img className="softtek1" src={logoImage} />
+        <img className="softtek1" src={logoImage} alt="logo softtek" />
       </div>
       <div className="form-container">
         <div className="login-form-container">
