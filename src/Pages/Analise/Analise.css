@@ -1,0 +1,64 @@
+.analises-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0rem 1rem;
+  font-family: Raleway;
+}
+
+.panel-container-analises {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: space-between;
+}
+
+.panel-analises {
+  background: linear-gradient(126.97deg, #070f33, #0e1431);
+  color: white;
+  flex: 1;
+  padding: 1rem 2rem;
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.248);
+}
+.panel-top-analise {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.analises-container h3 {
+  font-size: 1.4rem;
+}
+.tab-analises {
+  display: flex;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+.tab-analises button {
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: Raleway;
+  border: none;
+  background-color: transparent;
+  z-index: 222;
+}
+
+.analises-container hr {
+  background-color: #56577a;
+  height: 2px;
+  border: none;
+  position: relative;
+  bottom: 26px;
+  z-index: 111;
+  border-radius: 5px;
+}
+
+.doughnut-container{
+  height: auto;
+  display: flex;
+  justify-content: center;
+  height: 75%
+}

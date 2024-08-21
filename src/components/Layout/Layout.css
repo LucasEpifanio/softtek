@@ -1,0 +1,31 @@
+/* Layout principal */
+.layout {
+    display: grid;
+    grid-template-columns: 16.5rem 1fr; /* Sidebar fixa à esquerda e o conteúdo ocupa o resto do espaço */
+    grid-template-rows: 5.6rem 1fr; /* Barra de navegação na parte superior */
+    height: 100vh;
+    background-image: url(../../img/background.svg);
+    background-size: cover;
+  }
+  
+  /* Sidebar fixa à esquerda */
+  .sidebar {
+    grid-row: 1 / span 2; /* Ocupa toda a altura da página */
+    grid-column: 1 / 2;
+    position: fixed;
+  }
+  
+  /* Navegação do usuário */
+  .main-content {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+  
+  /* Conteúdo principal da página */
+  .page-content {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    padding:0.5rem 0.5rem; /* Ajustar o padding conforme necessário */
+    overflow-y: auto; /* Permitir rolagem se o conteúdo exceder a altura */
+  }
+  

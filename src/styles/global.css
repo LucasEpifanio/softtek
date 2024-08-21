@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Font+Awesome+5+Free:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Helvetica:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background-body);
+}
+
+/*Variaveis*/
+:root {
+  --background-body: linear-gradient(
+    159.02deg,
+    #2e2e2e,
+    #34353f 58.69%,
+    #1e2024
+  );
+}
+
+
+/*scroll-bar*/
+::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    159.02deg,
+    rgba(32, 27, 83, 0.74),
+    rgba(76, 72, 132, 0.5)
+  ); /* color of the scroll thumb */
+  border-radius: 5px; /* roundness of the scroll thumb */
+}

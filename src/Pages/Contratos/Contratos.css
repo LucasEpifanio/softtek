@@ -1,0 +1,138 @@
+.contratos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0rem 1rem;
+  font-family: Raleway;
+}
+
+.panel-container-contratos {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    126.97deg,
+    rgba(6, 11, 38, 0.74),
+    rgba(26, 31, 55, 0.5)
+  );
+  color: white;
+  flex: 1;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.248);
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 25px;
+}
+
+.dropdown-icon {
+  font-size: 20px;
+}
+
+.dropdown-content {
+  overflow: hidden;
+  height: 0;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition: 0.4s ease;
+}
+
+.dropdown-content.open {
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.filters-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.filter-item {
+  flex: 1;
+}
+
+.filter-item label {
+  margin-bottom: 5px;
+  padding: 0;
+}
+
+.filter-item select,
+.filter-item input {
+  width: 100%;
+  padding: 10px;
+  background-color: #2a3a57;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.filter-item option {
+  font-size: 0.9rem;
+}
+
+/* Estilo específico para inputs do tipo "date" */
+.filter-item input[type="date"] {
+  color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #2a3a57;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+/* Estilizando o ícone de data nos navegadores */
+.filter-item input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Inverte as cores para tornar o ícone branco */
+  cursor: pointer;
+}
+
+.panel-contratos {
+  background: linear-gradient(
+    126.97deg,
+    rgba(6, 11, 38, 0.74),
+    rgba(26, 31, 55, 0.5)
+  );
+  color: white;
+  flex: 1;
+  padding: 0.8rem 2rem;
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.248);
+}
+.panel-page-top-contratos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+table.contratos-table td {
+  text-align: left;
+  padding: 1.5rem 0.75rem;
+  border-bottom: 1px solid #56577a;
+  font-weight: 500;
+}
+
+.contratos-table th {
+  color: #a0aec0;
+  font-weight: 600;
+}
+
+/* Responsividade: exibe os filtros em colunas para telas menores */
+@media (max-width: 768px) {
+  .filters-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

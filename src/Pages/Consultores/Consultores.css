@@ -1,0 +1,55 @@
+.consultores-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0rem 1rem;
+}
+.panel-consultores {
+  background: linear-gradient(
+    126.97deg,
+    rgba(6, 11, 38, 0.74),
+    rgba(26, 31, 55, 0.5)
+  );
+  color: white;
+  flex: 1;
+  padding: 0.8rem 2rem;
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.248);
+}
+.panel-container-consultores {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.panel-consultores-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.4rem;
+  margin-top: 5px;
+  font-family: Raleway;
+}
+
+.consultores span {
+  font-weight: 400;
+}
+
+.panel-page-top-consultores{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Raleway;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+table.consultores-table td {
+    text-align: left;
+    padding: 1.5rem 0.75rem;
+    border-bottom: 1px solid #56577a;
+    font-weight: 500;
+}

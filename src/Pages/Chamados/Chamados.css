@@ -1,0 +1,135 @@
+.chamados-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0rem 1rem;
+}
+
+.panel-container-chamados {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.panel-chamados {
+  background: linear-gradient(
+    126.97deg,
+    rgba(6, 11, 38, 0.74),
+    rgba(26, 31, 55, 0.5)
+  );
+  color: white;
+  flex: 1;
+  padding: 1rem 2rem;
+  height: auto;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.248);
+}
+.panel-chamados-2 {
+  background: linear-gradient(
+    126.97deg,
+    rgba(6, 11, 38, 0.74),
+    rgba(26, 31, 55, 0.5)
+  );
+  color: white;
+  flex: 1;
+  padding: 1rem 2rem;
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction:column;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.248);
+  font-family: Raleway;
+}
+.panel-chamados-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.panel-title-chamados {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.panel-page-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Raleway;
+  margin-bottom: 1rem;
+}
+.panel-page-title {
+  display: flex;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.filters-page-chamados {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.custom-select {
+  display: flex;
+  gap: 0.4rem;
+  color: #a0aec0;
+  font-family: Raleway;
+  font-weight: 600;
+}
+
+.select-button {
+  background: #01b574;
+  border: none;
+  border-radius: 4px;
+  padding: 2px 5px 3px 5px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-down {
+  border: solid #333;
+  border-width: 0 2.5px 2.5px 0;
+  display: inline-block;
+  padding: 2.5px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.panel-chamados-2 canvas{
+  width: 900px !important;
+  height: auto !important;
+}
+.panel-chamados-graph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

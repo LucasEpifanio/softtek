@@ -1,0 +1,130 @@
+.sidebar {
+  width: 15rem;
+  height: 97dvh;
+  position: relative;
+  bottom: 1rem;
+  left: 1rem;
+  border-radius: 20px;
+  background: linear-gradient(95deg, #08998d, #07897f, #284473);
+  display: flex;
+  flex-direction: column;
+  padding: 0.875rem 0.875rem 4.062rem;
+  z-index: 5;
+  text-align: left;
+  font-size: 1.05rem;
+  color: #fff;
+  font-family: Raleway;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.calls-link, .calls-link-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.calls-link-menu.active {
+  background-color: #050c28;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: 222;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  position: relative;
+  z-index: 111;
+  bottom: 1rem;
+  background-color: #2e3657;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.submenu-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color:rgba(255, 255, 255, 0.715);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.active-nav-link {
+  background-color: #050c28; 
+  border-radius: 20px; 
+}
+
+.active-nav-link.submenu-link{
+  background-color: transparent; 
+  color:#fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.active-nav-link .submenu-item{
+  border-bottom: #05c695 solid 1px;
+}
+
+.calls-navigation {
+  width: 10rem;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0.6rem;
+  align-items: center;
+}
+
+.calls-label-container1 {
+  flex: 1;
+  flex-direction: column;
+}
+.calls-label-container2{
+  display: flex;
+  gap: 0.3rem;
+}
+
+.rectangle-parent14 {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 12px;
+  background-color: #050c28;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.menu {
+  line-height: 0.9;
+  font-weight: 600;
+}
+
+.navigation-items {
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: column;
+}
+
+.navigation-container {
+  flex-grow: 1;
+}
+
+.sidebar-divider {
+  margin-top: auto;
+}
