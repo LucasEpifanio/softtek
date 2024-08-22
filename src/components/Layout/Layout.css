@@ -1,7 +1,7 @@
 /* Layout principal */
 .layout {
     display: grid;
-    grid-template-columns: 16.5rem 1fr; /* Sidebar fixa à esquerda e o conteúdo ocupa o resto do espaço */
+    grid-template-columns: 15.8rem 1fr; /* Sidebar fixa à esquerda e o conteúdo ocupa o resto do espaço */
     grid-template-rows: 5.6rem 1fr; /* Barra de navegação na parte superior */
     height: 100vh;
     background-image: url(../../img/background.svg);
@@ -27,5 +27,11 @@
     grid-column: 2 / 3;
     padding:0.5rem 0.5rem; /* Ajustar o padding conforme necessário */
     overflow-y: auto; /* Permitir rolagem se o conteúdo exceder a altura */
+  }
+
+  @media screen and (max-width: 1600px) {
+    .layout {
+      grid-template-columns: 14.8rem 1fr; /* Sidebar fixa à esquerda e o conteúdo ocupa o resto do espaço */
+    }
   }
   

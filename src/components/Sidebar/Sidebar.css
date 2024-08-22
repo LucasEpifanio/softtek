@@ -1,19 +1,19 @@
 .sidebar {
-  width: 15rem;
+  width: 14.2rem;
   height: 97dvh;
   position: relative;
   bottom: 1rem;
   left: 1rem;
   border-radius: 20px;
-  background: linear-gradient(95deg, #08998d, #07897f, #284473);
+  background: var(--background-sidebar);
   display: flex;
   flex-direction: column;
-  padding: 0.875rem 0.875rem 4.062rem;
+  padding: 0.875rem 0.875rem 3.8rem;
   z-index: 5;
   text-align: left;
-  font-size: 1.05rem;
-  color: #fff;
-  font-family: Raleway;
+  font-size: 1rem;
+  color: var(--color-white);
+  font-family: var(--font-family-raleway);
 }
 
 .logo-container {
@@ -22,7 +22,8 @@
   margin-bottom: 10px;
 }
 
-.calls-link, .calls-link-menu {
+.calls-link,
+.calls-link-menu {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -46,7 +47,7 @@
   position: relative;
   z-index: 111;
   bottom: 1rem;
-  background-color: #2e3657;
+  background-color: #8dbbc776;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -57,26 +58,25 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color:rgba(255, 255, 255, 0.715);
-  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.746);
   font-weight: 600;
   padding: 1rem;
 }
 
 .active-nav-link {
-  background-color: #050c28; 
-  border-radius: 20px; 
+  background-color: #050c28;
+  border-radius: 20px;
 }
 
-.active-nav-link.submenu-link{
-  background-color: transparent; 
-  color:#fff;
+.active-nav-link.submenu-link {
+  background-color: transparent;
+  color: var(--color-white);
   padding: 1rem;
   display: flex;
   justify-content: center;
 }
 
-.active-nav-link .submenu-item{
+.active-nav-link .submenu-item {
   border-bottom: #05c695 solid 1px;
 }
 
@@ -94,7 +94,7 @@
   flex: 1;
   flex-direction: column;
 }
-.calls-label-container2{
+.calls-label-container2 {
   display: flex;
   gap: 0.3rem;
 }
@@ -107,7 +107,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .menu {
@@ -127,4 +127,19 @@
 
 .sidebar-divider {
   margin-top: auto;
+}
+
+
+@media screen and (max-width: 1600px) {
+  .sidebar {
+    width: 13rem;
+    padding: 0.75rem 0.75rem 3.5rem;
+    font-size: 0.95rem;
+  }
+
+  .rectangle-parent14 {
+    height: 2.2rem;
+    width: 2.2rem;
+    font-size: 0.9rem;
+  }
 }

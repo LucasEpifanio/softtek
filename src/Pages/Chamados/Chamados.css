@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 0rem 1rem;
+  padding: 0rem 0.5rem;
 }
 
 .panel-container-chamados {
@@ -19,7 +19,7 @@
   );
   color: white;
   flex: 1;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   height: auto;
   width: 100%;
   border-radius: 10px;
@@ -35,13 +35,13 @@
   );
   color: white;
   flex: 1;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   height: auto;
   border-radius: 10px;
   display: flex;
   flex-direction:column;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.248);
-  font-family: Raleway;
+  font-family: var(--font-family-raleway);
 }
 .panel-chamados-top{
   display: flex;
@@ -62,7 +62,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: Raleway;
+  font-family: var(--font-family-raleway);
   margin-bottom: 1rem;
 }
 .panel-page-title {
@@ -90,7 +90,7 @@ table {
 
 th,
 td {
-  padding: 12px 15px;
+  padding: 10px 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
@@ -98,7 +98,7 @@ td {
   display: flex;
   gap: 0.4rem;
   color: #a0aec0;
-  font-family: Raleway;
+  font-family: var(--font-family-raleway);
   font-weight: 600;
 }
 
@@ -132,4 +132,36 @@ td {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+@media screen and (max-width: 1600px) {
+  .panel-page-title {
+    font-size:0.92rem;
+}
+.panel-chamados table th {
+  padding: 0.5rem;
+}
+.panel-chamados table td {
+  padding: 0.4rem;
+  font-size: 0.8rem;
+}
+.custom-select {
+  gap: 0.25rem;
+  font-size: 0.85rem;
+}
+.select-button {
+  padding: 2px 4px 2px 4px;
+  font-size: 14px;
+}
+.panel-chamados {
+  padding: 1rem 1rem;
+}
+.panel-chamados-2 canvas{
+  width: 780px !important;
+  height: auto !important;
+}
+.panel-chamados-top h3{
+  font-size: 1.1rem;
+}
 }

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 0rem 1rem;
+  padding: 0rem 0.5rem;
 }
 .panel-consultores {
   background: linear-gradient(
@@ -12,7 +12,7 @@
   );
   color: white;
   flex: 1;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1.5rem;
   height: auto;
   border-radius: 10px;
   display: flex;
@@ -31,7 +31,7 @@
   justify-content: space-between;
   margin-bottom: 1.4rem;
   margin-top: 5px;
-  font-family: Raleway;
+  font-family: var(--font-family-raleway);
 }
 
 .consultores span {
@@ -42,7 +42,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: Raleway;
+    font-family: var(--font-family-raleway);
     margin-bottom: 1rem;
     margin-top: 0.5rem;
 }
@@ -53,3 +53,25 @@ table.consultores-table td {
     border-bottom: 1px solid #56577a;
     font-weight: 500;
 }
+
+@media screen and (max-width: 1600px) {
+  .consultores{
+    font-size: 0.95rem;
+  }
+  .consultores span {
+    font-size: 0.89rem;
+}
+  .filters span{
+    font-size: 0.9rem;
+  }
+  .filters {
+    gap: 0.5rem;
+}
+.panel-page-top-consultores {
+ font-size: 1rem;
+}
+.filters-page-chamados span{
+  font-size: 1rem!important;
+}
+}
+

@@ -267,7 +267,7 @@ const Analise = () => {
               </div>
             </div>
           </div>
-          <p
+          <p className="report"
             style={{
               fontSize: "1.4rem",
               fontWeight: 600,

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./DetalheConsultores.css";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import Perfil7 from "../../img/perfil-7.svg";
@@ -10,6 +12,10 @@ const DetalheConsultores = () => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const andamento = 10; // Progress percentage for "Em Andamento"
+  const aprovacao = 50; // Progress percentage for "Em Aprovação"
+  const finalizados = 40; // Progress percentage for "Finalizados"
 
   return (
     <div className="detalheconsultores-container">
@@ -106,7 +112,7 @@ const DetalheConsultores = () => {
               </div>
             </div>
           </div>
-          <div className="panel-contratos">
+          <div className="panel-detalhesconsultores-table">
             <table className="contratos-table">
               <thead>
                 <tr>
@@ -186,25 +192,67 @@ const DetalheConsultores = () => {
             <h3>Natália Oliveira</h3>
             <p>Financeiro</p>
           </div>
+
           <div className="graph-profile-detalheconsultores">
-            <div className="em-andamento">Em andamento</div>
-            <div className="em-aprovacao">Em aprovação</div>
-            <div className="finalizados">Finalizados</div>
+            <div style={{ width: 100, height: 100 }}>
+              <CircularProgressbar
+                value={andamento}
+                text={`${andamento}%`}
+                styles={buildStyles({
+                  textColor: "#fff",
+                  pathColor: "#E8A541",
+                  trailColor: "#d6d6d6",
+                })}
+              />
+              <p style={{ textAlign: "center", marginTop: "8px" }}>
+                Em Andamento
+              </p>
+            </div>
+
+            <div style={{ width: 100, height: 100 }}>
+              <CircularProgressbar
+                value={aprovacao}
+                text={`${aprovacao}%`}
+                styles={buildStyles({
+                  textColor: "#fff",
+                  pathColor: "#A93AF3",
+                  trailColor: "#d6d6d6",
+                })}
+              />
+              <p style={{ textAlign: "center", marginTop: "8px" }}>
+                Em Aprovação
+              </p>
+            </div>
+
+            <div style={{ width: 100, height: 100 }}>
+              <CircularProgressbar
+                value={finalizados}
+                text={`${finalizados}%`}
+                styles={buildStyles({
+                  textColor: "#fff",
+                  pathColor: "#0aab9e",
+                  trailColor: "#d6d6d6",
+                })}
+              />
+              <p style={{ textAlign: "center", marginTop: "8px" }}>
+                Finalizados
+              </p>
+            </div>
           </div>
           <div className="panel-bottom-detalheconsultores">
             <h3>Neste momento</h3>
             <div className="panel-3-detalheconsultores">
               <div className="total-chamados-panel">
                 <span>50</span>
-                <p>Total de chamados</p>
+                <p style={{ paddingTop: "10px" }}>Total de chamados</p>
               </div>
               <div className="em-andamento-panel">
                 <span>5</span>
-                <p>Em andamento</p>
+                <p style={{ paddingTop: "10px" }}>Em andamento</p>
               </div>
               <div className="finalizados-panel">
-                <span>50</span>
-                <p>Finalizados</p>
+                <span>20</span>
+                <p style={{ paddingTop: "10px" }}>Finalizados</p>
               </div>
             </div>
           </div>

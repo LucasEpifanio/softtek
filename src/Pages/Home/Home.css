@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 0rem 1rem;
+  padding: 0rem 0.5rem;
 }
 .panel-container {
   display: flex;
@@ -17,14 +17,14 @@
   );
   color: white;
   flex: 1;
-  padding: 0.8rem 2rem;
-  height: 16rem;
+  padding: 1rem 1.7rem;
+  height: auto;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.248);
 }
-.panel-1{
+.panel-1 {
   background: linear-gradient(
     126.97deg,
     rgba(6, 11, 38, 0.74),
@@ -46,10 +46,10 @@
   gap: 0.8rem;
 }
 
-.filter svg{
+.filter svg {
   width: 1.2rem;
   height: 1.2rem;
-  color: #A0AEC0;
+  color: #a0aec0;
 }
 .btn {
   display: flex;
@@ -63,17 +63,17 @@
 .btn1 {
   width: 4px;
   height: 4px;
-  background-color: #A0AEC0; 
+  background-color: #a0aec0;
   border-radius: 50%;
 }
 .panel-title {
   padding-top: 1.2rem;
-  font-family: Raleway;
-  color: #beccdd;
+  font-family: var(--font-family-raleway);
+  color: var(--color-ocean);
 }
 .panel-title h3 {
   margin-bottom: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .panel-top {
   display: flex;
@@ -100,33 +100,33 @@
   padding: 2rem;
 }
 .panel-number {
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: #15c888;
-  font-family: radio canada;
+  font-family: var(--font-family-radio);
 }
-
 
 /*Chartjs*/
-.chamados,.desempenho{
-  font-family: Raleway;
+.chamados,
+.desempenho {
+  font-family: var(--font-family-raleway);
 }
 
-.desempenho span{
+.desempenho span {
   font-weight: 400;
 }
 
-.panel-chamados-top{
+.panel-chamados-top {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
-  font-family: Raleway;
+  font-family: var(--font-family-raleway);
   font-weight: 600;
   margin-bottom: 1.4rem;
   align-items: center;
 }
 
-.panel-desempenho-top{
+.panel-desempenho-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -135,31 +135,31 @@
 }
 
 /*Table*/
-.title-top{
+.title-top {
   display: flex;
   gap: 0.5rem;
 }
-.table-top{
+.table-top {
   display: flex;
-  align-items:center;
+  align-items: center;
   margin-bottom: 0.8rem;
   justify-content: space-between;
 }
 h3.contratos-title {
-  color: #fff;
+  color: var(--color-white);
 }
-.table{
-  font-family: Raleway;
+.table {
+  font-family: var(--font-family-raleway);
   margin-bottom: 1.2rem;
 }
-.table span{
-  font-family: Raleway;
+.table span {
+  font-family: var(--font-family-raleway);
 }
-.icon-check{
-color: #15c888;
-font-size: 1.3rem;
+.icon-check {
+  color: #15c888;
+  font-size: 1.3rem;
 }
-.icon-check svg{
+.icon-check svg {
   width: 1.3rem;
 }
 
@@ -178,16 +178,15 @@ font-size: 1.3rem;
 table {
   width: 100%;
   border-collapse: collapse;
-  font-family: Raleway;
+  font-family: var(--font-family-raleway);
 }
 
-table th{
+table th {
   text-align: left;
   font-weight: 200;
   padding: 0.75rem;
   border-bottom: 1px solid #56577a;
 }
-
 
 table td {
   text-align: left;
@@ -198,7 +197,7 @@ table td {
 
 .progress-bar {
   width: 100%;
-  background-color: #2D2E5F;
+  background-color: #2d2e5f;
   height: 7px;
   border-radius: 4px;
   margin-top: 5px;
@@ -206,6 +205,46 @@ table td {
 
 .progress {
   height: 100%;
-  background-color: #0075FF;
+  background-color: #0075ff;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 1600px) {
+  .panel {
+    padding: 1rem 1.3rem;
+  }
+  .panel-title h3 {
+    font-size: 1rem;
+  }
+  .rectangle-parent svg {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+  .rectangle-parent {
+    height: 3rem;
+    width: 3rem;
+  }
+  .panel-number {
+    font-size: 2rem;
+  }
+  .panel-title span {
+    font-size: 0.9rem;
+  }
+
+  .panel-chamados-top span {
+    font-size: 0.75rem;
+  }
+  .chamados,
+  .desempenho {
+    font-size: 0.92rem;
+  }
+  h3.contratos-title {
+    font-size: 1rem;
+  }
+  .table span {
+    font-size: 0.9rem;
+}
+table {
+  font-size: 0.86rem;
+}
 }

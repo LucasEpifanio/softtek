@@ -4,9 +4,9 @@
 }
 
 h1{
-  font-family: "Raleway";
+  font-family: var(--font-family-raleway);
   font-weight: 100;
-  color: #fff;
+  color: var(--color-white);
 }
 
 .softtek{
@@ -31,7 +31,7 @@ h1{
 }
 
 .bemVindo {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 10px;
 }
 
