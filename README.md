@@ -1,3 +1,11 @@
+# Dashboard in React App
+
+Integrated Real-Time Monitoring System, Alerts 
+Proactive and Business Intelligence
+
+Link to Pitch video: (https://youtu.be/s8v41lijqQI)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
