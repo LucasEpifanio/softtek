@@ -52,49 +52,51 @@ const LoginForm = ({ className = "" }) => {
   }
 
   return (
-    <form className={`login-form ${className}`} onSubmit={handleSubmit}>
-      <div className="wel">
-        <div className="welcomeMessage">
-          <h1 className="bemVindo">Bem Vindo!</h1>
+    <div class="blurred-box">
+      <form className={`login-form ${className}`} onSubmit={handleSubmit}>
+        <div className="wel">
+          <div className="welcomeMessage">
+            <h1 className="bemVindo">Bem Vindo!</h1>
+          </div>
+          <div className="digiteSeuEMail">
+            <p>Digite seu e-mail e senha para entrar</p>
+          </div>
         </div>
-        <div className="digiteSeuEMail">
-          <p>Digite seu e-mail e senha para entrar</p>
+        <div className="email-field">
+          <div className="email-label-wrapper">
+            <b className="email">Email</b>
+          </div>
+          <div className="input-container">
+            <input
+              type="text"
+              className="input-email"
+              placeholder="Seu endereço de email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
         </div>
-      </div>
-      <div className="email-field">
-        <div className="email-label-wrapper">
-          <b className="email">Email</b>
+        <div className="password-field">
+          <div className="password-label-wrapper">
+            <b className="senha">Senha</b>
+          </div>
+          <div className="input-container">
+            <input
+              type="password"
+              className="input-senha"
+              placeholder="Sua senha"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
         </div>
-        <div className="input-container">
-          <input
-            type="text"
-            className="input-email"
-            placeholder="Seu endereço de email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+        <div className="login-button">
+          <button type="submit" className="buttonbase">
+            <div className="text">Entrar</div>
+          </button>
         </div>
-      </div>
-      <div className="password-field">
-        <div className="password-label-wrapper">
-          <b className="senha">Senha</b>
-        </div>
-        <div className="input-container">
-          <input
-            type="password"
-            className="input-senha"
-            placeholder="Sua senha"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-      </div>
-      <div className="login-button">
-        <button type="submit" className="buttonbase">
-          <div className="text">Entrar</div>
-        </button>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 };
 
