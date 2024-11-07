@@ -34,7 +34,6 @@
 }
 
 .calls-link-menu.active {
-  background-color: #050c28;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   z-index: 222;
@@ -47,9 +46,10 @@
   position: relative;
   z-index: 111;
   bottom: 1rem;
-  background-color: #8dbbc776;
+  background-color: #00000038;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
+  font-size: 14px;
 }
 
 .submenu-link {
@@ -58,7 +58,7 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.746);
+  color: rgb(255, 255, 255);
   font-weight: 600;
   padding: 1rem;
 }
@@ -77,7 +77,9 @@
 }
 
 .active-nav-link .submenu-item {
-  border-bottom: #05c695 solid 1px;
+  background-color: #050c28;
+  border-radius: 20px;
+  padding: 0.5rem 0.9rem;
 }
 
 .calls-navigation {

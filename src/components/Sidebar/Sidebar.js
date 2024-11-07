@@ -15,11 +15,20 @@ import { IoIosArrowUp } from "react-icons/io";
 
 const Sidebar = () => {
   const [consultoresSubmenuOpen, setConsultoresSubmenuOpen] = useState(false);
-  const [activeMenu, setActiveMenu] = useState('');
+  const [activeMenu, setActiveMenu] = useState("");
 
   const toggleConsultoresSubmenu = () => {
     setConsultoresSubmenuOpen(!consultoresSubmenuOpen);
-    setActiveMenu(consultoresSubmenuOpen ? '' : 'consultores');
+    setActiveMenu(consultoresSubmenuOpen ? "" : "consultores");
+  };
+
+  const closeSubmenuOnOtherMenuClick = (menuName) => {
+    if (activeMenu === "consultores" && menuName !== "consultores") {
+      setConsultoresSubmenuOpen(false);
+      setActiveMenu(menuName);
+    } else {
+      setActiveMenu(menuName);
+    }
   };
 
   return (
@@ -33,13 +42,16 @@ const Sidebar = () => {
         <nav className="navigation-items">
           <NavLink
             to="/home"
+            onClick={() => closeSubmenuOnOtherMenuClick("home")}
             className={({ isActive }) =>
-              isActive ? 'active-nav-link calls-link' : 'calls-link'
+              isActive ? "active-nav-link calls-link" : "calls-link"
             }
           >
             <div className="calls-navigation">
               <div className="calls-icon-container">
-                <div className="rectangle-parent14"><LuHome /></div>
+                <div className="rectangle-parent14">
+                  <LuHome />
+                </div>
               </div>
               <div className="calls-label-container1">
                 <span className="menu">Home</span>
@@ -49,13 +61,16 @@ const Sidebar = () => {
 
           <NavLink
             to="/chamados"
+            onClick={() => closeSubmenuOnOtherMenuClick("chamados")}
             className={({ isActive }) =>
-              isActive ? 'active-nav-link calls-link' : 'calls-link'
+              isActive ? "active-nav-link calls-link" : "calls-link"
             }
           >
             <div className="calls-navigation">
               <div className="calls-icon-container">
-                <div className="rectangle-parent14"><PiPhoneCallLight /></div>
+                <div className="rectangle-parent14">
+                  <PiPhoneCallLight />
+                </div>
               </div>
               <div className="calls-label-container1">
                 <span className="menu">Chamados</span>
@@ -65,16 +80,20 @@ const Sidebar = () => {
 
           {/* Consultores link with submenu toggle */}
           <div
-            className={`calls-link-menu ${activeMenu === 'consultores' ? 'active' : ''}`}
+            className={`calls-link-menu ${
+              activeMenu === "consultores" ? "active" : ""
+            }`}
             onClick={toggleConsultoresSubmenu}
           >
             <div className="calls-navigation">
               <div className="calls-icon-container">
-                <div className="rectangle-parent14"><FaUserTie /></div>
+                <div className="rectangle-parent14">
+                  <FaUserTie />
+                </div>
               </div>
               <div className="calls-label-container2">
                 <span className="menu">Consultores</span>
-                <span className={`arrow-icon ${consultoresSubmenuOpen ? 'open' : ''}`}>
+                <span className={`arrow-icon ${consultoresSubmenuOpen ? "open" : ""}`}>
                   {consultoresSubmenuOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
                 </span>
               </div>
@@ -87,7 +106,7 @@ const Sidebar = () => {
               <NavLink
                 to="/consultores"
                 className={({ isActive }) =>
-                  isActive ? 'active-nav-link submenu-link' : 'submenu-link'
+                  isActive ? "active-nav-link submenu-link" : "submenu-link"
                 }
               >
                 <div className="submenu-item">Consultores</div>
@@ -95,7 +114,7 @@ const Sidebar = () => {
               <NavLink
                 to="/detalheconsultores"
                 className={({ isActive }) =>
-                  isActive ? 'active-nav-link submenu-link' : 'submenu-link'
+                  isActive ? "active-nav-link submenu-link" : "submenu-link"
                 }
               >
                 <div className="submenu-item">Detalhe Consultores</div>
@@ -105,13 +124,16 @@ const Sidebar = () => {
 
           <NavLink
             to="/contratos"
+            onClick={() => closeSubmenuOnOtherMenuClick("contratos")}
             className={({ isActive }) =>
-              isActive ? 'active-nav-link calls-link' : 'calls-link'
+              isActive ? "active-nav-link calls-link" : "calls-link"
             }
           >
             <div className="calls-navigation">
               <div className="calls-icon-container">
-                <div className="rectangle-parent14"><IoDocumentTextOutline /></div>
+                <div className="rectangle-parent14">
+                  <IoDocumentTextOutline />
+                </div>
               </div>
               <div className="calls-label-container1">
                 <span className="menu">Contratos</span>
@@ -121,13 +143,16 @@ const Sidebar = () => {
 
           <NavLink
             to="/analise"
+            onClick={() => closeSubmenuOnOtherMenuClick("analise")}
             className={({ isActive }) =>
-              isActive ? 'active-nav-link calls-link' : 'calls-link'
+              isActive ? "active-nav-link calls-link" : "calls-link"
             }
           >
             <div className="calls-navigation">
               <div className="calls-icon-container">
-                <div className="rectangle-parent14"><TbBrandGoogleAnalytics /></div>
+                <div className="rectangle-parent14">
+                  <TbBrandGoogleAnalytics />
+                </div>
               </div>
               <div className="calls-label-container1">
                 <span className="menu">Análise</span>
@@ -141,13 +166,16 @@ const Sidebar = () => {
         <div className="navigation-list">
           <NavLink
             to="/perfil"
+            onClick={() => closeSubmenuOnOtherMenuClick("perfil")}
             className={({ isActive }) =>
-              isActive ? 'active-nav-link calls-link' : 'calls-link'
+              isActive ? "active-nav-link calls-link" : "calls-link"
             }
           >
             <div className="calls-navigation">
               <div className="calls-icon-container">
-                <div className="rectangle-parent14"><FaRegUser /></div>
+                <div className="rectangle-parent14">
+                  <FaRegUser />
+                </div>
               </div>
               <div className="calls-label-container1">
                 <span className="menu">Perfil</span>
@@ -157,13 +185,16 @@ const Sidebar = () => {
 
           <NavLink
             to="/configuracoes"
+            onClick={() => closeSubmenuOnOtherMenuClick("configuracoes")}
             className={({ isActive }) =>
-              isActive ? 'active-nav-link calls-link' : 'calls-link'
+              isActive ? "active-nav-link calls-link" : "calls-link"
             }
           >
             <div className="calls-navigation">
               <div className="calls-icon-container">
-                <div className="rectangle-parent14"><IoSettingsOutline /></div>
+                <div className="rectangle-parent14">
+                  <IoSettingsOutline />
+                </div>
               </div>
               <div className="calls-label-container1">
                 <span className="menu">Configurações</span>
@@ -172,6 +203,7 @@ const Sidebar = () => {
           </NavLink>
         </div>
       </div>
+      <span className="glider"></span>
     </div>
   );
 };
