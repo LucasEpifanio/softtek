@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import Loader from "../../components/Loader/Loader"; // Importa o Loader
+import Loader from "../../components/Loader/Loader";
 import "./LoginForm.css";
 
 const LoginForm = ({ className = "" }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false); // Estado de carregamento
+  const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false); // Estado para mostrar/ocultar senha
   const navigate = useNavigate();
 
   const validateForm = () => {
@@ -20,7 +21,7 @@ const LoginForm = ({ className = "" }) => {
     } else if (!email.includes("@")) {
       toast.warn("O e-mail deve conter '@'.");
       isValid = false;
-    } else if (email.length < 4) {
+    } else if (email.length < 5) {
       toast.warn("O e-mail deve conter pelo menos 4 caracteres.");
       isValid = false;
     }
@@ -36,23 +37,23 @@ const LoginForm = ({ className = "" }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (validateForm()) {
-      setLoading(true); // Ativa o estado de carregamento
+      setLoading(true);
       sessionStorage.setItem("isAuthenticated", "true");
       toast.success(`Bem-vindo, ${email}!`);
 
       setTimeout(() => {
-        setLoading(false); // Desativa o estado de carregamento
+        setLoading(false);
         navigate("/home");
-      }, 3000); // Simula um tempo de processamento de 3 segundos
+      }, 3000);
     }
   };
 
   if (loading) {
-    return <Loader />; // Renderiza o loader se estiver carregando
+    return <Loader />;
   }
 
   return (
-    <div class="blurred-box">
+    <div className="blurred-box">
       <form className={`login-form ${className}`} onSubmit={handleSubmit}>
         <div className="wel">
           <div className="welcomeMessage">
@@ -82,12 +83,19 @@ const LoginForm = ({ className = "" }) => {
           </div>
           <div className="input-container">
             <input
-              type="password"
+              type={showPassword ? "text" : "password"} // Alterar type dinamicamente
               className="input-senha"
               placeholder="Sua senha"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+            <button
+              type="button"
+              onClick={() => setShowPassword((prev) => !prev)}
+              className="toggle-password-button"
+            >
+              <i className={`fa ${showPassword ? "fa-eye-slash" : "fa-eye"}`}></i>
+            </button>
           </div>
         </div>
         <div className="login-button">
