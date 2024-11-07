@@ -24,19 +24,8 @@
 
 .calls-link,
 .calls-link-menu {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
-}
-
-.calls-link-menu.active {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  z-index: 222;
 }
 
 .submenu {
@@ -49,8 +38,9 @@
   background-color: #00000038;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  font-size: 14px;
+  font-size: 15px;
 }
+
 
 .submenu-link {
   display: flex;
@@ -63,23 +53,28 @@
   padding: 1rem;
 }
 
+.submenu-link:not(.active-nav-link):hover {
+  background-color: #1a2a5a5f; /* Lighter shade for submenu items */
+}
+.calls-link:not(.active-nav-link):hover,
+.calls-link-menu:not(.active-nav-link):hover {
+  background-color: #0a163a60; /* Lighter shade of background color */
+  border-radius: 20px;
+}
+
 .active-nav-link {
   background-color: #050c28;
   border-radius: 20px;
 }
 
-.active-nav-link.submenu-link {
+.active.submenu-link {
   background-color: transparent;
   color: var(--color-white);
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
 }
 
-.active-nav-link .submenu-item {
+.active.submenu-item {
   background-color: #050c28;
   border-radius: 20px;
-  padding: 0.5rem 0.9rem;
 }
 
 .calls-navigation {
