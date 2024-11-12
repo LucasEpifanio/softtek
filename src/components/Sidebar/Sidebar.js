@@ -31,7 +31,7 @@ const Sidebar = () => {
     }
   };
 
-  return (
+  return (    
     <div className="sidebar">
       <div className="logo-container">
         <img className="logo-icon" src={logoImage} alt="Softtek Logo" />
@@ -78,7 +78,6 @@ const Sidebar = () => {
             </div>
           </NavLink>
 
-          {/* Consultores link with submenu toggle */}
           <div
             className={`calls-link-menu ${
               activeMenu === "consultores" ? "active" : ""
@@ -100,27 +99,24 @@ const Sidebar = () => {
             </div>
           </div>
 
-          {/* Submenu for Consultores */}
-          {consultoresSubmenuOpen && (
-            <div className="submenu">
-              <NavLink
-                to="/consultores"
-                className={({ isActive }) =>
-                  isActive ? "active-nav-link submenu-link" : "submenu-link"
-                }
-              >
-                <div className="submenu-item">Consultores</div>
-              </NavLink>
-              <NavLink
-                to="/detalheconsultores"
-                className={({ isActive }) =>
-                  isActive ? "active-nav-link submenu-link" : "submenu-link"
-                }
-              >
-                <div className="submenu-item">Detalhe Consultores</div>
-              </NavLink>
-            </div>
-          )}
+          <div className={`submenu ${consultoresSubmenuOpen ? "open" : ""}`}>
+          <NavLink
+            to="/consultores"
+            className={({ isActive }) =>
+              isActive ? "active-nav-link submenu-link" : "submenu-link"
+            }
+          >
+            <div className="submenu-item">Consultores</div>
+          </NavLink>
+          <NavLink
+            to="/detalheconsultores"
+            className={({ isActive }) =>
+              isActive ? "active-nav-link submenu-link" : "submenu-link"
+            }
+          >
+            <div className="submenu-item">Detalhe Consultores</div>
+          </NavLink>
+        </div>
 
           <NavLink
             to="/contratos"
@@ -203,7 +199,7 @@ const Sidebar = () => {
           </NavLink>
         </div>
       </div>
-      <span className="glider"></span>
+
     </div>
   );
 };

@@ -4,7 +4,7 @@
   position: relative;
   bottom: 1rem;
   left: 1rem;
-  border-radius: 20px;
+  border-radius: 12px;
   background: var(--background-sidebar);
   display: flex;
   flex-direction: column;
@@ -31,14 +31,18 @@
 .submenu {
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
-  position: relative;
-  z-index: 111;
-  bottom: 1rem;
   background-color: #00000038;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-radius: 12px;
   font-size: 15px;
+  overflow: hidden; /* Importante para ocultar conteúdo durante o fechamento */
+  max-height: 0; /* Começa fechado */
+  opacity: 0; /* Invisível inicialmente */
+  transition: max-height 0.3s ease, opacity 0.3s ease; /* Transição suave */
+}
+
+.submenu.open {
+  max-height: 10rem; /* Defina um valor maior que a altura máxima do conteúdo */
+  opacity: 1; /* Torna visível */
 }
 
 
@@ -55,26 +59,22 @@
 
 .submenu-link:not(.active-nav-link):hover {
   background-color: #1a2a5a5f; /* Lighter shade for submenu items */
+  border-radius: 12px;
 }
 .calls-link:not(.active-nav-link):hover,
 .calls-link-menu:not(.active-nav-link):hover {
   background-color: #0a163a60; /* Lighter shade of background color */
-  border-radius: 20px;
+  border-radius: 12px;
 }
 
 .active-nav-link {
   background-color: #050c28;
-  border-radius: 20px;
+  border-radius: 12px;
 }
 
 .active.submenu-link {
   background-color: transparent;
   color: var(--color-white);
-}
-
-.active.submenu-item {
-  background-color: #050c28;
-  border-radius: 20px;
 }
 
 .calls-navigation {
@@ -85,6 +85,7 @@
   gap: 1rem;
   padding: 0.6rem;
   align-items: center;
+  cursor: pointer;
 }
 
 .calls-label-container1 {
@@ -114,7 +115,7 @@
 
 .navigation-items {
   display: flex;
-  gap: 0.8rem;
+  gap: 0.5rem;
   flex-direction: column;
 }
 
@@ -124,6 +125,10 @@
 
 .sidebar-divider {
   margin-top: auto;
+}
+
+.sidebar.closed {
+  transform: translateX(-100%); /* Hide sidebar when closed */
 }
 
 
@@ -138,5 +143,11 @@
     height: 2.2rem;
     width: 2.2rem;
     font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .sidebar {
+    display: none;
   }
 }
