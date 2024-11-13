@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Contratos.css";
+import Loader from "../../components/Loader/Loader";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 
@@ -9,6 +10,21 @@ const Contratos = () => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Configura um delay para exibir o carregamento inicial por um curto período
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Ajuste o tempo em milissegundos para o efeito desejado
+    
+    return () => clearTimeout(timer); // Limpa o timer ao desmontar o componente
+  }, []);
+  
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <div className="contratos-container">

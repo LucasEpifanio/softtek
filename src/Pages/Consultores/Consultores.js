@@ -1,11 +1,24 @@
+import React, { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
 import "./Consultores.css";
 import { RiFilter2Line } from "react-icons/ri";
+import Loader from "../../components/Loader/Loader";
 
 Chart.register(...registerables);
 
 const Consultores = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Configura um delay para exibir o carregamento inicial por um curto período
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Ajuste o tempo em milissegundos para o efeito desejado
+    
+    return () => clearTimeout(timer); // Limpa o timer ao desmontar o componente
+  }, []);
+
   const data = {
     labels: ["Executivo", "Senior", "Pleno", "Junior", "Estágiario"],
     datasets: [
@@ -120,6 +133,10 @@ const Consultores = () => {
       },
     },
   };
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <div className="consultores-container">

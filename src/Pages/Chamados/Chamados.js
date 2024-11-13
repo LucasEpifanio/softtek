@@ -1,7 +1,9 @@
+import React, { useState, useEffect } from "react";
 import "./Chamados.css";
 import { RiFilter2Line } from "react-icons/ri";
 import { Chart, registerables } from "chart.js"; 
 import { Bar } from "react-chartjs-2";
+import Loader from "../../components/Loader/Loader";
 
 import Perfil1 from "../../img/perfil-1.svg";
 import Perfil2 from "../../img/perfil-2.svg";
@@ -12,7 +14,20 @@ import Perfil6 from "../../img/perfil-6.svg";
 
 Chart.register(...registerables); 
 
+
 const Chamados = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Configura um delay para exibir o carregamento inicial por um curto período
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500); // Ajuste o tempo em milissegundos para o efeito desejado
+    
+    return () => clearTimeout(timer); // Limpa o timer ao desmontar o componente
+  }, []);
+
+
   const data = {
     labels: ["Melhoria", "Suporte", "Perfis", "Projetos", "Manutenção", "Transporte"],
     datasets: [
@@ -54,6 +69,12 @@ const Chamados = () => {
     },
     categoryPercentage: 0.4,
   };
+
+
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <div className="chamados-container">

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import "./Analise.css";
+import Loader from "../../components/Loader/Loader";
 
 import { RiFilter2Line } from "react-icons/ri";
 import { FaArrowTrendUp } from "react-icons/fa6";
@@ -12,6 +13,16 @@ Chart.register(...registerables);
 
 const Analise = () => {
   const [activeTab, setActiveTab] = useState("Projeto_01");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Configura um delay para exibir o carregamento inicial por um curto período
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Ajuste o tempo em milissegundos para o efeito desejado
+
+    return () => clearTimeout(timer); // Limpa o timer ao desmontar o componente
+  }, []);
 
   // Mock data for panels and table (you can replace with real data)
   const dataProjeto01 = {
@@ -190,11 +201,7 @@ const Analise = () => {
   };
 
   const doughnutData = {
-    labels: [
-      "Contratos",
-      "Contratos atuando",
-      "Perfis contratos",
-    ],
+    labels: ["Contratos", "Contratos atuando", "Perfis contratos"],
     datasets: [
       {
         data: [
@@ -219,6 +226,10 @@ const Analise = () => {
       },
     },
   };
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <div className="analises-container">
@@ -267,7 +278,8 @@ const Analise = () => {
               </div>
             </div>
           </div>
-          <p className="report"
+          <p
+            className="report"
             style={{
               fontSize: "1.4rem",
               fontWeight: 600,
@@ -309,17 +321,35 @@ const Analise = () => {
 
         <div className="panel-analises">
           <div className="panel-top-analise">
-            <h3><span style={{color:"#5CC6E5", fontWeight:600}}>{activeData.contratos}</span> contratos</h3>
+            <h3>
+              <span style={{ color: "#5CC6E5", fontWeight: 600 }}>
+                {activeData.contratos}
+              </span>{" "}
+              contratos
+            </h3>
           </div>
           <div className="doughnut-container">
             <Doughnut data={doughnutData} options={doughnutOptions} />
           </div>
-          <div style={{display:"flex", justifyContent:"space-between", paddingTop:"1rem"}}>
-          <p style={{fontWeight:500}}><span style={{color:"#D6FAFF", fontWeight:600}}>{activeData.contratosAtuando}%</span> Quantidade de contratos atuando</p>
-          <p style={{fontWeight:500}}><span style={{color:"#CFB55A", fontWeight:600}}>
-            {activeData.contratosDiferentes}%</span> Perfis contratos diferentes do
-            contratado
-          </p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              paddingTop: "1rem",
+            }}
+          >
+            <p style={{ fontWeight: 500 }}>
+              <span style={{ color: "#D6FAFF", fontWeight: 600 }}>
+                {activeData.contratosAtuando}%
+              </span>{" "}
+              Quantidade de contratos atuando
+            </p>
+            <p style={{ fontWeight: 500 }}>
+              <span style={{ color: "#CFB55A", fontWeight: 600 }}>
+                {activeData.contratosDiferentes}%
+              </span>{" "}
+              Perfis contratos diferentes do contratado
+            </p>
           </div>
         </div>
       </div>

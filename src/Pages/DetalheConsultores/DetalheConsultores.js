@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./DetalheConsultores.css";
+import Loader from "../../components/Loader/Loader";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { IoIosArrowDown } from "react-icons/io";
@@ -12,6 +13,21 @@ const DetalheConsultores = () => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Configura um delay para exibir o carregamento inicial por um curto período
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Ajuste o tempo em milissegundos para o efeito desejado
+    
+    return () => clearTimeout(timer); // Limpa o timer ao desmontar o componente
+  }, []);
+  
+  if (loading) {
+    return <Loader />;
+  }
 
   const andamento = 10; // Progress percentage for "Em Andamento"
   const aprovacao = 50; // Progress percentage for "Em Aprovação"

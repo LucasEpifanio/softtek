@@ -4,14 +4,17 @@ import "./Sidebar.css";
 import logoImage from "../../img/Logo.svg";
 import barraImage from "../../img/barra.svg";
 import { LuHome } from "react-icons/lu";
-import { PiPhoneCallLight } from "react-icons/pi";
-import { IoDocumentTextOutline } from "react-icons/io5";
+import { LuPhoneCall } from "react-icons/lu";
+import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 import { FaUserTie } from "react-icons/fa6";
 import { TbBrandGoogleAnalytics } from "react-icons/tb";
 import { FaRegUser } from "react-icons/fa";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
+import { IoPeopleSharp } from "react-icons/io5";
+import { FaClipboardUser } from "react-icons/fa6";
+import { PiSignOutBold } from "react-icons/pi";
 
 const Sidebar = () => {
   const [consultoresSubmenuOpen, setConsultoresSubmenuOpen] = useState(false);
@@ -69,7 +72,7 @@ const Sidebar = () => {
             <div className="calls-navigation">
               <div className="calls-icon-container">
                 <div className="rectangle-parent14">
-                  <PiPhoneCallLight />
+                <LuPhoneCall />
                 </div>
               </div>
               <div className="calls-label-container1">
@@ -106,7 +109,14 @@ const Sidebar = () => {
               isActive ? "active-nav-link submenu-link" : "submenu-link"
             }
           >
+               <div className="calls-icon-container">
+            <div className="rectangle-parent14">
+                  <IoPeopleSharp />
+                </div>
+                </div>
+                <div className="calls-label-container2">
             <div className="submenu-item">Consultores</div>
+                </div>
           </NavLink>
           <NavLink
             to="/detalheconsultores"
@@ -114,7 +124,14 @@ const Sidebar = () => {
               isActive ? "active-nav-link submenu-link" : "submenu-link"
             }
           >
+            <div className="calls-icon-container">
+            <div className="rectangle-parent14">
+            <FaClipboardUser />
+                </div>
+                </div>
+            <div className="calls-label-container2">
             <div className="submenu-item">Detalhe Consultores</div>
+            </div>
           </NavLink>
         </div>
 
@@ -128,7 +145,7 @@ const Sidebar = () => {
             <div className="calls-navigation">
               <div className="calls-icon-container">
                 <div className="rectangle-parent14">
-                  <IoDocumentTextOutline />
+                <HiOutlineClipboardDocumentList />
                 </div>
               </div>
               <div className="calls-label-container1">
@@ -194,6 +211,25 @@ const Sidebar = () => {
               </div>
               <div className="calls-label-container1">
                 <span className="menu">Configurações</span>
+              </div>
+            </div>
+          </NavLink>
+
+          <NavLink
+            to="/signout"
+            onClick={() => closeSubmenuOnOtherMenuClick("signout")}
+            className={({ isActive }) =>
+              isActive ? "active-nav-link calls-link" : "calls-link"
+            }
+          >
+            <div className="calls-navigation">
+              <div className="calls-icon-container">
+                <div className="rectangle-parent14">
+                <PiSignOutBold />
+                </div>
+              </div>
+              <div className="calls-label-container1">
+                <span className="menu">Sign out</span>
               </div>
             </div>
           </NavLink>

@@ -1,6 +1,8 @@
+import React, { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart, registerables } from "chart.js"; 
 import "./Home.css";
+import Loader from "../../components/Loader/Loader";
 import { PiPhoneCallLight } from "react-icons/pi";
 import { RiFilter2Line } from "react-icons/ri";
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
@@ -10,6 +12,22 @@ import { IoCheckmarkCircle } from "react-icons/io5";
 Chart.register(...registerables); 
 
 const Home = () => {
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Configura um delay para exibir o carregamento inicial por um curto período
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Ajuste o tempo em milissegundos para o efeito desejado
+    
+    return () => clearTimeout(timer); // Limpa o timer ao desmontar o componente
+  }, []);
+  
+  if (loading) {
+    return <Loader />;
+  }
+
   const data = {
     labels: ["1 Semana", "2 Semana", "3 Semana", "4 Semana"],
     datasets: [

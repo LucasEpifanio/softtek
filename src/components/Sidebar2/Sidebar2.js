@@ -178,7 +178,7 @@ const Sidebar2 = () => {
       <div className="sidebar-divider">
         <div className={`navigation-list-2 ${!sidebarOpen ? "hidden" : ""}`}>
           <NavLink
-            to="/perfil"
+            to="/"
             onClick={() => closeSubmenuOnOtherMenuClick("perfil")}
             className={({ isActive }) =>
               isActive ? "active-nav-link-2 calls-link-2" : "calls-link-2"
@@ -197,7 +197,7 @@ const Sidebar2 = () => {
           </NavLink>
 
           <NavLink
-            to="/configuracoes"
+            to="/"
             onClick={() => closeSubmenuOnOtherMenuClick("configuracoes")}
             className={({ isActive }) =>
               isActive ? "active-nav-link-2 calls-link-2" : "calls-link-2"
@@ -211,6 +211,25 @@ const Sidebar2 = () => {
               </div>
               <div className="calls-label-container1-2">
                 <span className="menu">Configurações</span>
+              </div>
+            </div>
+          </NavLink>
+
+          <NavLink
+            to="/"
+            onClick={() => closeSubmenuOnOtherMenuClick("configuracoes")}
+            className={({ isActive }) =>
+              isActive ? "active-nav-link-2 calls-link-2" : "calls-link-2"
+            }
+          >
+            <div className="calls-navigation-2">
+              <div className="calls-icon-container-2">
+                <div className="rectangle-parent14-2">
+                  <IoSettingsOutline />
+                </div>
+              </div>
+              <div className="calls-label-container1-2">
+                <span className="menu">Logoff</span>
               </div>
             </div>
           </NavLink>
