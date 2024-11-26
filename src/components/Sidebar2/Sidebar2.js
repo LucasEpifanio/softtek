@@ -4,16 +4,19 @@ import "./Sidebar2.css";
 import logoImage from "../../img/Logo.svg";
 import barraImage from "../../img/barra.svg";
 import { LuHome } from "react-icons/lu";
-import { PiPhoneCallLight } from "react-icons/pi";
-import { IoDocumentTextOutline } from "react-icons/io5";
+import { LuPhoneCall } from "react-icons/lu";
+import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 import { FaUserTie } from "react-icons/fa6";
 import { TbBrandGoogleAnalytics } from "react-icons/tb";
 import { FaRegUser } from "react-icons/fa";
 import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
-import { RiMenuFold2Line } from "react-icons/ri";
+import { IoPeopleSharp } from "react-icons/io5";
+import { FaClipboardUser } from "react-icons/fa6";
+import { PiSignOutBold } from "react-icons/pi";
 import { RiMenuFoldLine } from "react-icons/ri";
+import { RiMenuFold2Line } from "react-icons/ri";
 
 const Sidebar2 = () => {
   const [consultoresSubmenuOpen, setConsultoresSubmenuOpen] = useState(false);
@@ -72,7 +75,7 @@ const Sidebar2 = () => {
             </div>
             {sidebarOpen && (
               <div className="calls-label-container1-2">
-                <span className="menu">Home</span>
+                <span className="menu-2">Home</span>
               </div>
             )}
           </div>
@@ -88,11 +91,11 @@ const Sidebar2 = () => {
             <div className="calls-navigation-2">
               <div className="calls-icon-container-2">
                 <div className="rectangle-parent14-2">
-                  <PiPhoneCallLight />
+                <LuPhoneCall />
                 </div>
               </div>
               <div className="calls-label-container1-2">
-                <span className="menu">Chamados</span>
+                <span className="menu-2">Chamados</span>
               </div>
             </div>
           </NavLink>
@@ -108,7 +111,7 @@ const Sidebar2 = () => {
                 </div>
               </div>
               <div className="calls-label-container2">
-                <span className="menu">Consultores</span>
+                <span className="menu-2">Consultores</span>
                 <span className={`arrow-icon ${consultoresSubmenuOpen ? "open" : ""}`}>
                   {consultoresSubmenuOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
                 </span>
@@ -120,18 +123,32 @@ const Sidebar2 = () => {
             <NavLink
               to="/consultores"
               className={({ isActive }) =>
-                isActive ? "active-nav-link-2 submenu-link" : "submenu-link"
+                isActive ? "active-nav-link-2 submenu-link-2" : "submenu-link-2"
               }
             >
-              <div className="submenu-item">Consultores</div>
+              <div className="calls-icon-container">
+            <div className="rectangle-parent14">
+                  <IoPeopleSharp />
+                </div>
+                </div>
+                <div className="calls-label-container2">
+            <div className="submenu-item">Consultores</div>
+                </div>
             </NavLink>
             <NavLink
               to="/detalheconsultores"
               className={({ isActive }) =>
-                isActive ? "active-nav-link-2 submenu-link" : "submenu-link"
+                isActive ? "active-nav-link-2 submenu-link-2" : "submenu-link-2"
               }
             >
-              <div className="submenu-item">Detalhe Consultores</div>
+              <div className="calls-icon-container">
+            <div className="rectangle-parent14">
+            <FaClipboardUser />
+                </div>
+                </div>
+            <div className="calls-label-container2">
+            <div className="submenu-item">Detalhe Consultores</div>
+            </div>
             </NavLink>
           </div>
 
@@ -145,11 +162,11 @@ const Sidebar2 = () => {
             <div className="calls-navigation-2">
               <div className="calls-icon-container-2">
                 <div className="rectangle-parent14-2">
-                  <IoDocumentTextOutline />
+                  <HiOutlineClipboardDocumentList />
                 </div>
               </div>
               <div className="calls-label-container1-2">
-                <span className="menu">Contratos</span>
+                <span className="menu-2">Contratos</span>
               </div>
             </div>
           </NavLink>
@@ -168,7 +185,7 @@ const Sidebar2 = () => {
                 </div>
               </div>
               <div className="calls-label-container1-2">
-                <span className="menu">Análise</span>
+                <span className="menu-2">Análise</span>
               </div>
             </div>
           </NavLink>
@@ -191,7 +208,7 @@ const Sidebar2 = () => {
                 </div>
               </div>
               <div className="calls-label-container1-2">
-                <span className="menu">Perfil</span>
+                <span className="menu-2">Perfil</span>
               </div>
             </div>
           </NavLink>
@@ -210,14 +227,14 @@ const Sidebar2 = () => {
                 </div>
               </div>
               <div className="calls-label-container1-2">
-                <span className="menu">Configurações</span>
+                <span className="menu-2">Configurações</span>
               </div>
             </div>
           </NavLink>
 
           <NavLink
-            to="/"
-            onClick={() => closeSubmenuOnOtherMenuClick("configuracoes")}
+            to="/signout"
+            onClick={() => closeSubmenuOnOtherMenuClick("signout")}
             className={({ isActive }) =>
               isActive ? "active-nav-link-2 calls-link-2" : "calls-link-2"
             }
@@ -225,11 +242,11 @@ const Sidebar2 = () => {
             <div className="calls-navigation-2">
               <div className="calls-icon-container-2">
                 <div className="rectangle-parent14-2">
-                  <IoSettingsOutline />
+                <PiSignOutBold />
                 </div>
               </div>
               <div className="calls-label-container1-2">
-                <span className="menu">Logoff</span>
+                <span className="menu-2">Sign out</span>
               </div>
             </div>
           </NavLink>
