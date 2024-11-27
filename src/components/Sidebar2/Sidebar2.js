@@ -127,7 +127,7 @@ const Sidebar2 = () => {
               }
             >
               <div className="calls-icon-container">
-            <div className="rectangle-parent14">
+            <div className="rectangle-parent14-2">
                   <IoPeopleSharp />
                 </div>
                 </div>
@@ -142,7 +142,7 @@ const Sidebar2 = () => {
               }
             >
               <div className="calls-icon-container">
-            <div className="rectangle-parent14">
+            <div className="rectangle-parent14-2">
             <FaClipboardUser />
                 </div>
                 </div>

@@ -101,8 +101,8 @@
 }
 
 .rectangle-parent14 {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2.4rem;
+  width: 2.4rem;
   border-radius: 12px;
   background-color: #050c28;
   display: flex;
@@ -140,12 +140,6 @@
     width: 13rem;
     padding: 0.75rem 0.75rem 3.5rem;
     font-size: 0.95rem;
-  }
-
-  .rectangle-parent14 {
-    height: 2.2rem;
-    width: 2.2rem;
-    font-size: 0.9rem;
   }
 }
 
