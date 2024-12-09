@@ -234,12 +234,8 @@ table td {
   .panel-chamados-top span {
     font-size: 0.75rem;
   }
-  .chamados,
   .desempenho {
     font-size: 0.92rem;
-  }
-  h3.contratos-title {
-    font-size: 1rem;
   }
   .table span {
     font-size: 0.9rem;
@@ -247,4 +243,74 @@ table td {
 table {
   font-size: 0.86rem;
 }
+}
+
+
+@media screen and (max-width: 1080px) {
+  .home-container {
+    gap: 1.8rem;
+    padding: 0rem 0rem;
+}
+.home-container .panel-container {
+    gap: 1.1rem;
+  }
+  .panel {
+    padding: 0.8rem 1rem;
+}
+.filter svg {
+  width: 1rem;
+  height: 1rem;
+  color: #a0aec0;
+}
+.panel-container .filters {
+  gap: 1rem;
+}
+.panel-container {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.btn1 {
+  width: 3px;
+  height: 3px;
+}
+.panel-title h3 {
+  font-size: 0.9rem;
+}
+.panel-title span {
+  font-size: 0.8rem;
+}
+.rectangle-parent {
+  height: 2.6rem;
+  width: 2.6rem;
+}
+.rectangle-parent svg {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.panel-number {
+  font-size: 1.7rem;
+}
+h3.contratos-title {
+  font-size: 0.9rem;
+}
+.desempenho {
+  font-size: 0.9rem;
+}
+.panel-container .panel-chamados-top h3 {
+  font-size: 0.9rem;
+}
+.panel-container .panel-chamados-top span {
+  font-size: 0.7rem;
+}
+table {
+  font-size: 0.75rem;
+}
+}
+@media screen and (max-width: 600px){
+  .panel-container {
+    flex-direction: column;
+  }
 }
