@@ -17,6 +17,17 @@ Chart.register(...registerables);
 
 const Chamados = () => {
   const [loading, setLoading] = useState(true);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 1080px)");
+    const handleResize = () => setIsSmallScreen(mediaQuery.matches);
+    handleResize();
+    mediaQuery.addEventListener("change", handleResize);
+
+    // Limpeza
+    return () => mediaQuery.removeEventListener("change", handleResize);
+  }, []);
 
   useEffect(() => {
     // Configura um delay para exibir o carregamento inicial por um curto período
@@ -189,7 +200,7 @@ const Chamados = () => {
                       borderRadius: "10px",
                     }}
                   >
-                    Waiting for approval
+                   {isSmallScreen ? "Waiting" : "Waiting for approval"}
                   </span>
                 </td>
                 <td>01/08/24</td>

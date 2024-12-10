@@ -222,3 +222,46 @@ input:-webkit-autofill:active {
   flex-direction: column;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.248);
 }
+
+
+@media screen and (max-width: 1800px){
+  .panel-container-detalheconsultores {
+    flex-direction: column;
+}
+.panel-bottom-detalheconsultores {
+  margin: 3rem 3rem;
+}
+.panel-3-detalheconsultores {
+  display: flex;
+  justify-content:space-between;
+  gap: 1.5rem;
+}
+}
+@media screen and (max-width: 1050px){
+  table.contratos-table td {
+    padding: 1.5rem 0.5rem!important;
+}
+.panel-detalhesconsultores-table{
+  overflow-x: auto;
+}
+h3{
+  font-size: 1rem!important;
+}
+}
+@media screen and (max-width: 650px){
+  .panel-bottom-detalheconsultores {
+    margin: 3rem 0rem;
+}
+.graph-profile-detalheconsultores {
+  gap: 3.8rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2rem 0rem;
+}
+.panel-3-detalheconsultores {
+  gap: 0.8rem;
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+}

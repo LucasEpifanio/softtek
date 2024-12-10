@@ -86,6 +86,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
+  min-width: 910px;
 }
 
 th,
@@ -163,5 +164,62 @@ td {
 }
 .panel-chamados-top h3{
   font-size: 1.1rem;
+}
+}
+
+@media screen and (max-width: 1080px){
+  .custom-select {
+    font-size: 0.75rem;
+}
+td{
+  gap: 0.3rem!important;
+}
+.panel-chamados table td {
+  font-size: 0.7rem;
+}
+.page-content {
+  padding: 0.5rem 0rem!important;
+}
+.chamados-container {
+  padding: 0rem 0rem!important;
+}
+.panel-chamados {
+  padding: 1rem 0.8rem;
+}
+}
+
+@media screen and (max-width: 990px){
+  .panel-page-title {
+    font-size: 0.85rem;
+}
+.panel-chamados {
+  overflow-x: auto; 
+}
+.panel-chamados-2 canvas {
+  width: 450px !important;
+  height: auto !important;
+}
+.panel-chamados-2 {
+  padding: 1rem 1rem;
+}
+}
+@media screen and (max-width: 650px){
+  .panel-page-title {
+    font-size: 0.8rem;
+}
+.panel-chamados-top {
+  padding-bottom: 0.8rem;
+}
+.panel-chamados-2 canvas {
+  width: 385px !important;
+  height: auto !important;
+}
+.panel-chamados-2 {
+  padding: 1rem 0.8rem;
+  overflow-x: auto; 
+  min-width: 500px;
+}
+.panel-container {
+  overflow: auto;
 }
 }

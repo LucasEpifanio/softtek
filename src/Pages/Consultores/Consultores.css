@@ -75,3 +75,43 @@ table.consultores-table td {
 }
 }
 
+@media screen and (max-width: 1000px){
+  .panel-container-consultores {
+    gap: 1rem;
+    flex-direction: column;
+}
+table th {
+  padding: 0.55rem;
+}
+.panel-consultores{
+  overflow: auto;
+}
+}
+
+@media screen and (max-width: 635px){
+  .consultores {
+    font-size: 0.8rem;
+}
+.consultores span {
+  font-size: 0.75rem;
+}
+.filters span {
+  font-size: 0.75rem;
+  margin-left: 0.4rem;
+}
+.panel-consultores{
+  padding: 0.8rem 0.8rem;
+}
+.panel-page-title {
+  font-size: 0.75rem;
+  flex-wrap: wrap;
+}
+.filters-page-chamados span {
+  font-size: 0.75rem !important;
+  margin-left: 0.4rem;
+}
+.filters {
+  gap: 0.3rem;
+}
+}
+

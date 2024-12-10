@@ -309,8 +309,47 @@ table {
   font-size: 0.75rem;
 }
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 750px) {
+.panel {
+  flex: 1 1 calc(0% - 0.5rem); /* Define a largura de 50% menos o gap */
+  max-width: calc(50% - 0.5rem);
+}
+
+.panel-container .panel:nth-child(3) {
+  flex: 1 1 100%; /* Terceiro painel ocupa toda a largura */
+  max-width: 100%;
+}
+}
+
+@media screen and (max-width: 580px){
   .panel-container {
     flex-direction: column;
   }
+  .panel {
+    flex: 1 100%;  
+    max-width: calc(100% - 0.5rem);
+  }
+  
+  .panel-container .panel:nth-child(3) {
+    flex: 1 100%; 
+    max-width: 100%;
+  }
+  .page-content {
+    padding: 0rem!important;
+}
+.panel-1 {
+  padding: 0.8rem 0.8rem;
+}
+.table-container {
+  padding: 1.2rem;
+}
+.panel-container .panel-chamados-top h3 {
+  font-size: 0.8rem;
+}
+.panel-container .panel-chamados-top span {
+  font-size: 0.6rem;
+}
+.desempenho {
+  font-size: 0.8rem;
+}
 }
