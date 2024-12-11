@@ -156,3 +156,9 @@ table.contratos-table td {
   font-size: 0.85rem;
 }
 }
+
+@media (max-width: 1080px) {
+  .panel-contratos {
+  overflow: auto;
+}
+}

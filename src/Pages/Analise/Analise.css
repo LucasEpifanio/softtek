@@ -60,7 +60,6 @@
   height: auto;
   display: flex;
   justify-content: center;
-  height: 75%
 }
 
 @media screen and (max-width: 1600px) {
@@ -77,4 +76,43 @@
   font-size: 0.9rem!important;
   margin-bottom: 0.5rem;
 }
+}
+
+@media screen and (max-width: 1000px) {
+  .panel-container-analises {
+    flex-direction: column;
+}
+
+.doughnut-container{
+  box-sizing: border-box;
+  display: block;
+  height: 428px;
+  width: 428px;
+  margin: 0 auto;
+}
+.analises-container {
+  padding: 0rem 0rem;
+}
+.panel-analises {
+  padding: 1rem 1rem;
+}
+.panel-analises{
+  overflow: auto;
+}
+
+}
+
+@media screen and (max-width: 600px) {
+  .panel-container-analises {
+    flex-direction: column;
+}
+
+.doughnut-container{
+  box-sizing: border-box;
+  display: block;
+  height: 280px;
+  width: 280px;
+  margin: 0 auto;
+}
+
 }

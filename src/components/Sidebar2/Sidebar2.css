@@ -13,6 +13,7 @@
   transition: width 0.3s ease;
   font-family: var(--font-family-raleway);
   font-size: 13px;
+  z-index: 999;
 }
 
 /* When sidebar is collapsed */
