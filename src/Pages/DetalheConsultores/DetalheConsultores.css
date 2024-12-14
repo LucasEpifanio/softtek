@@ -264,4 +264,7 @@ h3{
   flex-wrap: wrap;
   justify-content: center;
 }
+.detalheconsultores-container {
+  padding: 0rem 0.2rem;
+}
 }

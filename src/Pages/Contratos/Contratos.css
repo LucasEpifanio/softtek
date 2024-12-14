@@ -161,4 +161,7 @@ table.contratos-table td {
   .panel-contratos {
   overflow: auto;
 }
+.contratos-container {
+  padding: 0rem 0.2rem;
+}
 }

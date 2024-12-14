@@ -91,7 +91,7 @@
   margin: 0 auto;
 }
 .analises-container {
-  padding: 0rem 0rem;
+  padding: 0rem 0.3rem;
 }
 .panel-analises {
   padding: 1rem 1rem;
@@ -113,6 +113,9 @@
   height: 280px;
   width: 280px;
   margin: 0 auto;
+}
+.analises-container {
+  padding: 0rem 0.2rem;
 }
 
 }

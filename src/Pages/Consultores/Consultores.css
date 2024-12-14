@@ -113,5 +113,8 @@ table th {
 .filters {
   gap: 0.3rem;
 }
+.consultores-container {
+  padding: 0rem 0.2rem;
+}
 }
 
