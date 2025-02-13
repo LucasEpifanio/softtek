@@ -57,9 +57,11 @@
 }
 
 .doughnut-container{
-  height: auto;
   display: flex;
   justify-content: center;
+  height: 428px!important;
+  width: 428px!important;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 1600px) {
@@ -76,6 +78,9 @@
   font-size: 0.9rem!important;
   margin-bottom: 0.5rem;
 }
+.panel-container-analises {
+  flex-direction: column;
+}
 }
 
 @media screen and (max-width: 1000px) {
@@ -86,8 +91,8 @@
 .doughnut-container{
   box-sizing: border-box;
   display: block;
-  height: 428px;
-  width: 428px;
+  height: 328px!important;
+  width: 328px!important;
   margin: 0 auto;
 }
 .analises-container {
@@ -110,8 +115,8 @@
 .doughnut-container{
   box-sizing: border-box;
   display: block;
-  height: 280px;
-  width: 280px;
+  height: 280px !important;
+  width: 280px !important;
   margin: 0 auto;
 }
 .analises-container {
